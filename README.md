@@ -1,4 +1,4 @@
-# Subdomain App with Laravel Sail, Vite, and Vue.js
+# SubSail
 
 This is a simple web application built with Laravel Sail, Vite, and Vue.js that demonstrates how subdomains can be used in a Laravel app. It allows you to test subdomains using Valet.
 
@@ -25,7 +25,7 @@ Follow these instructions to get the application up and running on your local ma
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/subdomain-app.git
+   git clone git@github.com:samdiano/subsail.git
    ```
 
 2. Navigate to the project root directory:
