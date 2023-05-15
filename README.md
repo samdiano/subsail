@@ -31,7 +31,7 @@ Follow these instructions to get the application up and running on your local ma
 2. Navigate to the project root directory:
 
    ```shell
-   cd subdomain-app
+   cd subsail
    ```
 
 3. Install PHP dependencies using Composer:
@@ -46,47 +46,47 @@ Follow these instructions to get the application up and running on your local ma
    cp .env.example .env
    ```
 
+5. Create an alias for Sail (optional but recommended):
+
+   ```shell
+   alias sail='bash vendor/bin/sail' 
+   ```
+
+   This step allows you to use the `sail` command directly instead of `./vendor/bin/sail`.
+
 5. Generate the application key:
 
    ```shell
-   php artisan key:generate
+   sail php artisan key:generate
    ```
 
 6. Install JavaScript dependencies using npm or Yarn:
 
    ```shell
-   npm install
+   sail npm install
    ```
 
 7. Compile the frontend assets using Vite:
 
    ```shell
-   npm run dev
+   sail npm run dev
    ```
 
 8. Start the Docker containers using Laravel Sail:
 
    ```shell
-   ./vendor/bin/sail up -d
+   sail up -d
    ```
 
 10. Configure Valet to test subdomains locally:
-
-    - If you're using Valet on macOS:
 
       ```shell
       valet link
       ```
 
-    - If you're using Valet on Linux:
-
-      ```shell
-      valet domain test
-      ```
-
-    This will allow you to access subdomains by appending `test` to your local domain, e.g., `subdomain.test`.
+This will allow you to access subdomains by appending `{subdomain}` to `subsail.test`, e.g., `blog.subsail.test`.
 
 11. Access the application in your browser:
 
-    - If you're using Valet, visit [http://subdomain.test](http://subdomain.test)
-    - If you're not using Valet, visit [http://localhost](http://localhost)
+    - If you're using Valet, visit [http://subsail.test](http://subsail.test) for the main domain.
+    - For subdomains, use the format `http://{subdomain}.subsail.test`, e.g., [http://blog.subsail.test](http://blog.subsail.test) for the `blog` subdomain.
